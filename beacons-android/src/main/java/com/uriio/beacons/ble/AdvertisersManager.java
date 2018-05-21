@@ -136,10 +136,6 @@ public class AdvertisersManager {
     public boolean canAdvertise() {
         if (null != mBleAdvertiser) return true;
 
-        if (!mBluetoothAdapter.isMultipleAdvertisementSupported()) {
-            return false;
-        }
-
         mBleAdvertiser = mBluetoothAdapter.getBluetoothLeAdvertiser();
         return null != mBleAdvertiser;
     }
